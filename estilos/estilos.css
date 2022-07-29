@@ -1,0 +1,918 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+/* HEADER  */
+header{
+    position: sticky;
+    height: 64px;
+    width: 100%;
+}
+header img{
+    height: 60px;
+    width: auto;
+    z-index: 2;
+    position: fixed;
+    margin-left: 36px;
+}
+nav{
+    font-size: 0;
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    /* flex-wrap: wrap; */
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 150px;
+    /* position: relative; */
+    font-size: 30px;
+    text-align: center;
+    margin: 0px 20px;  
+}
+nav ul li a{
+    color: #575757;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #747474;
+}
+/* INDEX */
+main{
+    height: auto;
+    width: 100%;    
+}
+.banner{
+    width: 100%;
+    height: 1100px; 
+    background-size: cover;
+    background-position: bottom;
+    background-image: url(../multimedia/banner.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h1{
+    color: #fff;
+    font-size: 68px;
+    font-weight: 600;
+    width: 660px;
+    height: 200px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+h1{
+    color: #575757;
+    font-size: 68px;
+    font-weight: 600;
+    margin-top: 64px;
+    padding: 40px 0px 24px 48px;
+}
+section{
+    width: 100%;
+    height: auto;
+    color: #575757;
+    display: flex;
+    align-items: center;
+    padding: 0px 24px 32px 24px;
+}
+.me{
+    height: max-content;
+    background-color: #d6d6d6;
+    justify-content: space-evenly;
+    
+}
+.picture{
+    width: 328px;
+    height: 328px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px 5px #747474
+}
+.picture img{
+    width: 100%;
+    height: auto;
+}
+.description{
+    width: 60%;
+    height: auto;
+}
+.about{
+    text-align: center;
+    flex-direction: column;
+}
+h2{
+    font-size: 61px;
+    font-weight: lighter;
+    padding-bottom: 24px;
+}
+p{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #575757;
+}
+.textCenter{
+    padding: 0px 64px;
+}
+.opinion{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card{
+    width: 30%;
+    height: 252px;
+    padding: 16px;
+    border-radius: 5%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px 5px #d6d6d6;
+}
+.cardContent{
+    font-style: italic;
+}
+.cardName{
+    text-align: end;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.cardService{
+    text-align: end;
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+/* FOOTER  */
+footer{
+    width: 100%;
+    height: 420px;
+    background-color: #d6d6d6;
+    color: #575757;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 36px;
+}
+footer h3{
+    font-size: 48px;
+    font-weight: lighter;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.newsletter label{
+    font-size: 16px;
+    font-weight: bold;
+}
+.newsletterInput{
+    height: 40px;
+    width: 45%;
+    padding: 0px 16px 0px 16px;
+    border: 1px solid #575757;
+    border-radius: 5px;
+    margin: 8px;
+    font-size: 16px;
+}
+.newsletterButton{
+    width: 20%;
+    height: 40px;
+    background-color: #575757;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 8px;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #575757;
+}
+.linkInstagram{
+    margin-right: 24px;
+    height: 80px;
+    width: 80px;
+    background-image: url(../multimedia/icon_instagram.png);
+    background-size: cover;
+}
+.linkInstagram:hover{
+    color: #000;
+}
+.linkMail{
+    margin-left: 24px;
+    height: 80px;
+    width: 80px;
+    background-image: url(../multimedia/icon_email.png);
+    background-size: cover;
+}
+.linkMail:hover{
+    color: #000;
+}
+/* SERVICIOS  */
+.subtitle{
+    color: #575757;
+    margin-left: 48px;
+    font-size: 34px;
+    letter-spacing: 0.25px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.servicios{
+    width: 100%;
+    height: auto;
+    display: grid;
+    margin-bottom: 16px;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 32px;
+    justify-content: center;
+}
+.cardServicios{
+    width: 100%;
+    height: 560px;
+    padding: 16px;
+    background-image: url(../multimedia/servicios_2.png);
+    background-size: cover;
+    background-position: bottom;
+    border: 1px solid #d6d6d6;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 4px #afadad;
+    margin-bottom:48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.tituloCard{
+    color: #575757;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.highlight{
+    color: #575757;
+    font-size: 24px;
+    font-weight: bold;    
+}
+/* WORKSHOPS  */
+.workshops{
+    width: 100%;
+    height: auto;
+    display: grid;
+    margin-bottom: 16px;
+    grid-template-columns: 45% 45%;
+    grid-gap: 72px;
+    justify-content: center;
+}
+.cardWorkshops{
+    width: 100%;
+    height: 720px;
+    padding: 28px;
+    background-image: url(../multimedia/servicios_2.png);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #d6d6d6;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 4px #afadad;
+    margin-bottom:48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/* BLOG  */
+.temas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.temas ul li{
+    list-style: none;
+    height: 64px;
+    display: inline-block;
+    text-align: center;
+    margin: 96px 0px 0px 48px;  
+}
+.temas ul li a{
+    color: #575757;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    padding: 16px 16px;
+    background-color: #efe4bf;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+.temas ul li a:hover{
+    background-color: #d7cdae;
+    padding: 18px 18px;
+}
+.blog{
+    margin: 48px;
+    display: grid;
+    grid-template-areas: 
+        "entrada1 entrada1"
+        "entrada2 entrada3";
+    grid-gap: 48px;
+}
+.entradaBlog1{
+    grid-area: entrada1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+}
+.blogBanner1{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-image: url(../multimedia/blog1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    border-radius: 7px;
+}
+.tag{
+    background-color: #efe4bf;
+    color: #575757;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin: 0;
+    border-radius: 5px;
+}
+.entradaBlog1 h3{
+    margin: 24px 0px;
+    text-transform: uppercase;
+}
+.blog hr{
+    width: 20%;
+    height: 4px;
+    background-color: #efe4bf;
+    margin-bottom: 32px;
+    border: none;
+}
+.entradaBlog2{
+    grid-area: entrada2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+}
+.blogBanner2{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-image: url(../multimedia/blog2.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    border-radius: 7px;
+}
+.entradaBlog2 h3{
+    margin: 24px 0px;
+    text-transform: uppercase;
+}
+.entradaBlog3{
+    grid-area: entrada3;
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+}
+.blogBanner3{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-image: url(../multimedia/blog3.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    border-radius: 7px;
+}
+.entradaBlog3 h3{
+    margin: 24px 0px;
+    text-transform: uppercase;
+}
+/* CONTACTO  */
+.contactoMain{
+    background-image: url(../multimedia/main_background.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contactoMain h1{
+    margin-top: 0;
+    padding-top: 64px;
+}
+form{
+    width: 100%;
+    padding: 64px 48px 48px 48px;
+}
+form label{
+    color: #575757;
+    font-size: 18px;
+}
+form input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    margin-bottom: 32px;
+    margin-top: 8px;    
+}
+form select{
+    color: #575757;
+    font-size: 16px;
+    padding: 8px 36px 8px 8px;
+    background-color: #f5f5f5;
+    margin-bottom: 32px;
+    margin-top: 8px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+}
+form textarea{
+    width: 100%;
+    height: 160px;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+.checkbox{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d6d6d6;
+}
+.checkboxText{
+    font-size: 16px;
+    margin: 8px;
+}
+.sendButton{
+    width: 228px;
+    height: 40px;
+    background-color: #575757;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 8px;
+}
+/* RESPONSIVE */
+@media only screen and (max-width: 679px){
+    header{
+        height: 86px;
+        display: flex;
+        justify-content: center;
+    }
+    header img{
+        height: 40px;
+        margin: 0px;
+    }
+    nav{
+        height: auto;
+        width: 100%;
+        padding-top: 48px;
+        padding-bottom: 16px;
+        justify-content: space-around;
+    }
+    nav ul li{
+        display: inline;
+        width: auto;
+        font-size: 18px;
+        text-align: center;
+        margin: 16px;  
+    }
+    .banner{
+        width: 100%;
+        height: 100vh;
+    }
+    .banner h1{
+        font-size: 36px;
+        font-weight: 600;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    section{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 200px;
+        height: 200px;
+        border: 3px solid #fff;
+    }
+    h1{
+        font-size: 28px;
+        margin-top: 36px;
+        padding: 0px 0px 0px 16px;
+    }
+    h2{
+        font-size: 28px;
+        font-weight: lighter;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left:16px;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom:8px;
+    }
+    p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .items{
+        flex-direction: column;
+        padding: 0px 16px;
+
+    }
+    .card{
+        width: 100%;
+        height: 220px;
+        padding: 8px;
+        box-shadow: 0 0 3px 3px #d6d6d6;
+    }
+    footer{
+        height: auto;
+        padding: 16px;
+    }
+    footer h3{
+        font-size: 24px;
+        padding-bottom: 16px;
+    }
+    .newsletterInput{
+        width: 100%;
+        text-align: center;
+    }
+    .newsletterButton{
+        width: 80%;
+        margin-bottom: 24px;
+    }
+    .linkInstagram{
+        height: 64px;
+        width: 64px;
+    }
+    .linkMail{
+        height: 64px;
+        width: 64px;
+    }  
+    .servicios{
+        grid-template-columns: 90%;
+    }
+    .cardServicios{
+        height: 380px;
+        padding: 8px;
+        background-position: center;
+        box-shadow: 0 0 3px 3px #afadad;
+        margin-bottom: 0px;
+    }
+    .tituloCard{
+        font-size: 18px;
+        margin: 0px;
+    }
+    .detallesCard{
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .highlight{
+        font-size: 18px; 
+        text-align: left; 
+        margin-bottom: 0px; 
+    }  
+    .workshops{
+        margin-bottom: 16px;
+        grid-template-columns: 90%;
+        grid-gap:32px;
+    }
+    .cardWorkshops{
+        height: 380px;
+        padding: 8px;
+        background-position: center;
+        box-shadow: 0 0 3px 3px #afadad;
+        margin-bottom:0px;
+    }
+    form{
+        padding: 16px;
+    }
+    form label{
+        font-size: 16px;
+    }
+    form input{
+        margin-bottom: 16px;        
+    }
+    .checkboxText{
+        margin: 0px;
+    }
+    .temas{
+        padding: 36px 0px 0px 16px;
+    }
+    .temas ul li{
+        height: 36px;
+        margin: 4px;  
+    }
+    .temas ul li a{
+        font-size: 16px;
+        padding: 8px 8px;
+    }
+    .blog{
+        margin: 16px;
+        display: grid;
+        grid-template-areas: 
+            "entrada1"
+            "entrada2"
+            "entrada3";
+        grid-gap: 0px;
+    }
+    .entradaBlog1{
+        margin-bottom: 16px;
+    }
+    .fecha{
+        text-align: left;
+        margin: 16px 0px 8px 0px;
+    }
+    .blogBanner1{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .tag{
+        padding: 8px;
+        border-radius: 3px;
+    }
+    .entradaBlog1 h3{
+        margin: 12px 0px;
+    }
+    .blog hr{
+        width: 40%;
+        height: 3px;
+        margin-bottom: 16px;
+    }
+    .blog p{
+        text-align: left;
+    }
+    .entradaBlog2{
+        margin-bottom: 16px;
+    }
+    .blogBanner2{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .entradaBlog2 h3{
+        margin: 12px 0px;
+    }
+    .entradaBlog3{
+        margin-bottom: 16px;
+    }
+    .blogBanner3{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .entradaBlog3 h3{
+        margin: 12px 0px;
+    }
+}
+@media only screen and (min-width: 680px) and (max-width: 1199px){
+    header img{
+        margin: 0px 16px;
+    }
+    nav ul li{
+        width: auto;
+        font-size: 20px;
+        margin: 16px;  
+    }
+    .banner{
+        width: 100%;
+        height: 100vh;
+    }
+    .banner h1{
+        font-size: 48px;
+        font-weight: 600;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    section{
+        flex-direction: column;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 300px;
+        height: 300px;
+        border: 3px solid #fff;
+    }
+    h1{
+        font-size: 42px;
+        margin-top: 0px;
+        padding: 16px 0px 0px 36px;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: lighter;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left:36px;
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .items{
+        padding: 0px 16px;
+    }
+    .card{
+        width: 100%;
+        height: 320px;
+        padding: 8px;
+        box-shadow: 0 0 3px 3px #d6d6d6;
+    }
+    footer{
+        height: auto;
+        padding: 16px;
+    }
+    footer h3{
+        font-size: 24px;
+        padding-bottom: 16px;
+    }
+    .newsletterInput{
+        width: 80%;
+        text-align: center;
+    }
+    .newsletterButton{
+        width: 60%;
+        margin-bottom: 24px;
+    }
+    .linkInstagram{
+        height: 64px;
+        width: 64px;
+    }
+    .linkMail{
+        height: 64px;
+        width: 64px;
+    }
+    .servicios{
+        grid-template-columns: 45% 45%;
+    }
+    .cardServicios{
+        height: 400px;
+        background-position: center;
+        box-shadow: 0 0 3px 3px #afadad;
+    }
+    .tituloCard{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .detallesCard{
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .highlight{
+        font-size: 20px; 
+        text-align: left; 
+        margin-bottom: 0px; 
+    }  
+    .workshops{
+        grid-template-columns: 45% 45%;
+        grid-gap:32px;
+    }
+    .cardWorkshops{
+        height: 400px;
+        padding: 16px;
+        box-shadow: 0 0 3px 3px #afadad;
+    }
+    form{
+        padding: 36px;
+    }
+    form label{
+        font-size: 18px;
+    }
+    form input{
+        margin-bottom: 16px;
+    }
+    .temas{
+        padding: 36px 0px 0px 36px;
+    }
+    .temas ul li{
+        height: 36px;
+        margin: 4px;  
+    }
+    .temas ul li a{
+        font-size: 16px;
+        padding: 8px 8px;
+    }
+    .blog{
+        margin: 36px;
+        display: grid;
+        grid-template-areas: 
+            "entrada1 entrada1"
+            "entrada2 entrada3";
+        grid-gap: 24px;
+    }
+    .entradaBlog1{
+        margin-bottom: 16px;
+    }
+    .fecha{
+        text-align: left;
+        margin: 16px 0px 8px 0px;
+    }
+    .blogBanner1{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .tag{
+        padding: 8px;
+        border-radius: 3px;
+    }
+    .entradaBlog1 h3{
+        margin: 12px 0px;
+    }
+    .blog hr{
+        width: 40%;
+        height: 3px;
+        margin-bottom: 16px;
+    }
+    .blog p{
+        text-align: left;
+    }
+    .entradaBlog2{
+        margin-bottom: 16px;
+    }
+    .blogBanner2{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .entradaBlog2 h3{
+        margin: 12px 0px;
+    }
+    .entradaBlog3{
+        margin-bottom: 16px;
+    }
+    .blogBanner3{
+        height: 280px;
+        border-radius: 5px;
+    }
+    .entradaBlog3 h3{
+        margin: 12px 0px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <title>contacto</title>
+</head>
+<body>
+    <header>
+        <img src="../multimedia/Logo sintesis.png" alt="">
+        <nav>
+            <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+                <li><a href="workshops.html">workshops</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="#">contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contactoMain">
+        <h1>Contacto</h1>
+        <h2 class="subtitle">Si te gustaría comprar algún servicio o tenés una consulta, podés escribirme completando este formulario</h2>
+        <div class="form">
+            <form action="archivo" method="get" enctype="text/plain">
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" required ><br>
+                <label for="mail">Email</label><br>
+                <input type="email" name="mail" required><br>
+                <label for="tema">Tema de consulta</label><br>
+                <select name="tema" id="" value="Seleccioná un tema">
+                    <option value="">Seleccioná un tema</option>
+                    <option value="servicios">Servicios</option>
+                    <option value="workshops">Workshops</option>
+                    <option value="gift">Gift card</option>
+                    <option value="otro">Otro</option>
+                </select><br>        
+                <label for="mensaje">Mensaje</label><br>
+                <textarea name="mensaje" id="" cols="30" rows="7" required></textarea><br>
+                <input type="checkbox" name="suscribirse" class="checkbox">
+                <label for="suscribirse" class="checkboxText">Deseo suscribirme al newsletter para recibir novedades y descuentos</label><br>
+                <input type="submit" name="enviar" class="sendButton">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="newsletter">
+            <h3>Suscibite al newsletter</h3>
+            <p>Conocé las novedades antes que nadie y recibí descuentos exclusivos</p>
+            <label for="newsletter">Mail</label>
+            <input type="email" name="newsletter" placeholder="Escribe tu mail" class="newsletterInput">
+            <input type="submit" value="Suscribirme" class="newsletterButton"><br>
+        </div>
+        <div class="links">
+            <a href="https://www.instagram.com/bycarolinavidal/" class="linkInstagram"></a>
+            <a href="pages\contacto.html" class="linkMail"></a>
+        </div>
+    </footer>  
+</body>
+</html>
