@@ -6,27 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="multimedia/Logo sintesis.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilos.css">
     <title>home</title>
 </head>
 <body>
     <header>
-        <img src="multimedia/Logo sintesis.png" alt="">
-        <nav>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="pages\servicios.html">servicios</a></li>
-                <li><a href="pages\workshops.html">workshops</a></li>
-                <li><a href="pages\blog.html">blog</a></li>
-                <li><a href="pages\contacto.html">contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class=navbar-brand href="#">
+                    <img src="multimedia/Logo sintesis.png" alt="" class="d-inline-block align-text-top">            
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h2 class="offcanvas-title" id="offcanvasNavbarLabel">by Carolina Vidal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#me">sobre mi</a></li>
+                            <li><a class="dropdown-item" href="#about">filosofía</a></li>
+                            <li><a class="dropdown-item" href="#opinion">opiniones</a></li>                
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages\servicios.html">servicios</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages\workshops.html">workshops</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages\blog.html">blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages\contacto.html">contacto</a>
+                      </li>                    
+                    </ul>
+                  </div>                
+            </div>
         </nav>
     </header>
     <main>
         <div class="banner">
             <h1>¿Estás lista para descubrir tu mejor versión?</h1>
         </div>
-        <section class="me">
+        <section id="me">
             <div class="picture">
                 <img src="multimedia/PSFix_20220112_011009.jpeg" alt="profile" height="auto" width="30%"> 
             </div>
@@ -36,32 +66,42 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nihil itaque ipsum, cum minima perferendis et, sunt, sapiente nostrum magnam est quos explicabo quia incidunt molestiae consectetur illum inventore nobis.Eligendi nihil officiis repellendus ullam ipsam tempora blanditiis, neque possimus vitae quod ea dignissimos qui molestiae distinctio similique eveniet voluptas excepturi esse mollitia labore numquam modi? Quia assumenda dignissimos harum!</p>
             </div>
         </section>
-        <section class="about">
+        <section id="about">
             <h2>Encontrá tu mejor versión</h2>
             <p class="textCenter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! Beatae quod ex culpa tempore voluptate?
             Pariatur unde libero reiciendis asperiores sequi, recusandae consequatur ut neque facere, nemo, quos at illo aut inventore hic omnis provident nisi ullam quo odio? Laudantium beatae accusantium quo. A, ipsa.</p>
             <p class="textCenter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! Beatae quod ex culpa tempore voluptate?
             Pariatur unde libero reiciendis asperiores sequi, recusandae consequatur ut neque facere, nemo, quos at illo aut inventore hic omnis provident nisi ullam quo odio? Laudantium beatae accusantium quo. A, ipsa.</p>
         </section>
-        <section class="opinion">
+        <section id="opinion">
             <h2>Opiniones de clientes</h2>
-            <div class="items">
-                <div class="card">
-                    <p class="cardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! </p>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">                
+                <div class="carousel-inner mx-auto">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <p class="cardContent">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime!"</p>
+                    <p class="cardName">Nombre, edad</p>
+                    <p class="cardService">Servicio</p>        
+                  </div>
+                  <div class="carousel-item" data-bs-interval="10000">
+                    <p class="cardContent">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime!"</p> 
+                    <p class="cardName">Nombre, edad</p>
+                    <p class="cardService">Servicio</p>                   
+                  </div>
+                  <div class="carousel-item" data-bs-interval="10000">
+                    <p class="cardContent">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime!"</p>                    
                     <p class="cardName">Nombre, edad</p>
                     <p class="cardService">Servicio</p>
+                  </div>
                 </div>
-                <div class="card">
-                    <p class="cardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! </p>
-                    <p class="cardName">Nombre, edad</p>
-                    <p class="cardService">Servicio</p>
-                </div> 
-                <div class="card">
-                    <p class="cardContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, soluta dolorum? Porro doloremque qui aut in delectus commodi perspiciatis, quibusdam ullam sapiente quos maxime! </p>
-                    <p class="cardName">Nombre, edad</p>
-                    <p class="cardService">Servicio</p>
-                </div>    
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
     </main>
     <footer>
@@ -77,5 +117,7 @@
             <a href="pages\contacto.html" class="linkMail"></a>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </body>
 </html>
