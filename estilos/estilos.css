@@ -250,35 +250,27 @@ footer h3{
     font-weight: 100;
     margin-bottom: 40px;
 }
-.servicios{
-    width: 100%;
-    height: auto;
-    display: grid;
-    margin-bottom: 16px;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 32px;
-    justify-content: center;
+.services ul li a{
+    font-size: 26px;
+    color: #575757;
 }
-.cardServicios{
-    width: 100%;
-    height: 560px;
-    padding: 16px;
-    background-image: url(../multimedia/servicios_2.png);
-    background-size: cover;
-    background-position: bottom;
-    border: 1px solid #d6d6d6;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-bottom:48px;
+.row{
+    padding: 2rem;
+    margin: 0;
+}
+.col{
+    padding: 0;
+}
+.card-img-overlay{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     transition: box-shadow 1s;
 }
-.cardServicios:hover{
+.card-img-overlay:hover{
     box-shadow: 0 0 10px 4px #afadad;
 }
-.tituloCard{
+.card-title{
     color: #575757;
     text-transform: uppercase;
     font-size: 24px;
