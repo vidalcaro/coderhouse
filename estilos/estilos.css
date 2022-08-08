@@ -258,9 +258,9 @@ footer h3{
     padding: 2rem;
     margin: 0;
 }
-.col{
+/* .col{
     padding: 0;
-}
+} */
 .card-img-overlay{
     display: flex;
     flex-direction: column;
@@ -340,124 +340,37 @@ footer h3{
     box-shadow: 0 0 8px 4px #afadad;
     padding: 18px 18px;
 }
-.blog{
-    margin: 48px;
-    display: grid;
-    grid-template-areas: 
-        "entrada1 entrada1"
-        "entrada2 entrada3";
-    grid-gap: 48px;
+.container{
+    margin: 1%;
 }
-.entradaBlog1{
-    grid-area: entrada1;
-    width: 100%;
-    height: auto;
-    margin-bottom: 60px;
-}
-.blogBanner1{
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 5px;
-    background-image: url(../multimedia/blog1.jpg);
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
+.blog .card{
+    padding:0;
     flex-direction: column;
-    align-content: flex-end;
-    border-radius: 7px;
-}
-.tag{
-    background-color: #efe4bf;
-    color: #575757;
-    width: fit-content;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin: 0;
-    border-radius: 5px;
-}
-.entradaBlog1 h3{
-    margin: 24px 0px;
-    text-transform: uppercase;
-    font-size: 28px;
-}
-.blog hr{
-    width: 20%;
-    height: 4px;
-    background-color: #efe4bf;
-    margin-bottom: 32px;
     border: none;
 }
-.entradaBlog2{
-    grid-area: entrada2;
-    width: 100%;
-    height: auto;
-    margin-bottom: 80px;
-    font-size: 28px;
-}
-.blogBanner2{
-    width: 100%;
-    height: 500px;
+.img-container{
+    height: 20rem;
     overflow: hidden;
-    border-radius: 5px;
-    background-image: url(../multimedia/blog2.jpg);
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    border-radius: 7px;
 }
-.entradaBlog2 h3{
+.card-img-top{
+    border-radius: 0;
+}
+.btn-primary{
+    background-color: #575757;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    border: none;
+}
+.card h3{
     margin: 24px 0px;
     text-transform: uppercase;
     font-size: 28px;
 }
-.entradaBlog3{
-    grid-area: entrada3;
-    width: 100%;
-    height: auto;
-    margin-bottom: 80px;
-}
-.blogBanner3{
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 5px;
-    background-image: url(../multimedia/blog3.jpg);
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    border-radius: 7px;
-}
-.entradaBlog3 h3{
-    margin: 24px 0px;
-    text-transform: uppercase;
-    font-size: 28px;
-}
-.blogBanner1:hover{
-    box-shadow: 0 0 10px 4px #afadad;
-}
-.blogBanner2:hover{
-    box-shadow: 0 0 10px 4px #afadad;
-}
-.blogBanner3:hover{
-    box-shadow: 0 0 10px 4px #afadad;
-}
-.entradaBlog1 h3:hover{
-    font-size: 29px;
-    color: #3e3e3e;
-}
-.entradaBlog2 h3:hover{
-    font-size: 29px;
-    color: #3e3e3e;
-}
-.entradaBlog3 h3:hover{
-    font-size: 29px;
-    color: #3e3e3e;
+hr{
+    border-width: 3px;
+    border-color: #e0d09b;
+    width: 30%;
 }
 /* CONTACTO  */
 .contactoMain{
