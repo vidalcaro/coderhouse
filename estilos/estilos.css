@@ -19,16 +19,13 @@ nav{
     background-color: #fff;
 }
 nav ul li{
-    list-style: none;
     font-size: 30px;
     text-align: center;
-    margin: 0px 20px;  
+    margin: 0px 16px;  
     justify-content: flex-end;
 }
-nav ul li a{
-    color: #575757;
-    font-weight: 500;
-    text-decoration: none;
+.nav-link{
+    color: #747474;
 }
 .navbar-toggler{
     border: none;
@@ -38,13 +35,13 @@ nav ul li a{
     text-decoration: underline;
     text-decoration-color: #000;
 }
-.dropdown-menu li a:hover{
-    background-color: #575757;
+.dropdown-menu li:hover{
+    background-color: #afadad;
 }
 .dropdown-item{
     text-align: left;  
     font-size: 26px; 
-    color: #575757;
+    color: #747474;
 }
 /* INDEX */
 main{
@@ -76,14 +73,14 @@ main{
 }
 @keyframes rebote {
     0% {
-        font-size: 68px;
+        font-size: 76px;
     }
     50% {
-        font-size: 80px;
+        font-size: 84px;
         text-shadow: 0 0 10px 10px #000;
     }
     100% {
-        font-size: 68px;
+        font-size: 76px;
     }
 }
 h1{
@@ -102,10 +99,9 @@ section{
     padding: 0px 24px 32px 24px;
 }
 #me{
-    height: max-content;
     background-color: #d6d6d6;
     justify-content: space-evenly;
-    
+    align-items: flex-start;
 }
 .picture{
     width: 328px;
@@ -147,6 +143,7 @@ p{
     display: inline-block;
     justify-content: center;
     text-align: center;
+    
 }
 .carousel-inner{
     width: 70%; 
@@ -170,9 +167,9 @@ p{
 }
 /* FOOTER  */
 footer{
-    width: 100%;
-    height: 420px;
     background-image: url(../multimedia/low-poly-grid-haikei\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #575757;
     display: flex;
     flex-direction: column;
@@ -196,7 +193,6 @@ footer h3{
 }
 .newsletterInput{
     height: 40px;
-    width: 45%;
     padding: 0px 16px 0px 16px;
     border: 1px solid #575757;
     border-radius: 5px;
@@ -204,7 +200,6 @@ footer h3{
     font-size: 16px;
 }
 .newsletterButton{
-    width: 20%;
     height: 40px;
     background-color: #575757;
     color: #fff;
@@ -226,6 +221,7 @@ footer h3{
     justify-content: center;
     text-decoration: none;
     color: #575757;
+    margin: 24px;
 }
 .linkInstagram{
     margin-right: 24px;
@@ -432,32 +428,33 @@ form textarea{
     margin: 8px;
 }
 /* RESPONSIVE */
-@media only screen and (max-width: 679px){
-    header{
-        height: 86px;
-        display: flex;
-        justify-content: center;
-    }
+@media only screen and (max-width: 575px){
     header img{
-        height: 40px;
         margin: 0px;
     }
-    nav{
-        height: auto;
-        width: 100%;
-        padding-top: 48px;
-        padding-bottom: 16px;
-        justify-content: space-around;
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .nav-item{
+        font-size: 20px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+    }
+    .dropdown-menu li{
+        border-bottom: solid 1px #afadad;
     }
     nav ul li{
-        display: inline;
-        width: auto;
-        font-size: 18px;
-        text-align: center;
-        margin: 16px;  
+        margin: 0px;
+        text-align: left; 
+    }
+    .dropdown-item{
+        font-size: 20px;
+        margin: 8px 0px;
+        padding-left: 0;
     }
     .banner{
-        width: 100%;
         height: 100vh;
     }
     .banner h1{
@@ -479,9 +476,9 @@ form textarea{
             font-size: 46px;
         }
     }
-    section{
+    #me{
         flex-direction: column;
-        padding: 0px;
+        align-items: center;
     }
     .description{
         width: 100%;
@@ -499,9 +496,7 @@ form textarea{
     }
     h2{
         font-size: 28px;
-        font-weight: lighter;
-        padding-top: 16px;
-        padding-bottom: 24px;
+        padding-top: 24px;
         text-align: center;
     }
     .subtitle{
@@ -514,29 +509,31 @@ form textarea{
         font-size: 16px;
         text-align: center;
     }
+    #about{
+        padding: 0px 24px 32px 24px;
+    }
     .textCenter{
         padding: 0px 16px;
     }
-    .items{
-        flex-direction: column;
-        padding: 0px 16px;
-
-    }    
+    .cardName{
+        font-size: 16px;
+    }
+    .cardService{
+        font-size: 16px;
+    }
     footer{
-        height: auto;
         padding: 16px;
     }
     footer h3{
         font-size: 24px;
-        padding-bottom: 16px;
+        padding-bottom: 8px;
+        margin: 8px;
     }
     .newsletterInput{
-        width: 100%;
         text-align: center;
     }
-    .newsletterButton{
-        width: 80%;
-        margin-bottom: 24px;
+    .links{
+        margin: 8px;
     }
     .linkInstagram{
         height: 64px;
@@ -545,7 +542,15 @@ form textarea{
     .linkMail{
         height: 64px;
         width: 64px;
-    }     
+    }   
+    .card-title{
+        font-size: 20px;
+    }  
+    .highlight{
+        font-size: 20px; 
+        text-align: left; 
+        margin-bottom: 0px; 
+    }
     .card-text{
         text-align: left;
     }    
@@ -556,11 +561,7 @@ form textarea{
     .carousel-caption{
         bottom: 10rem;
     }
-    .highlight{
-        font-size: 18px; 
-        text-align: left; 
-        margin-bottom: 0px; 
-    }
+
     .carousel-item{
         overflow: hidden;
     } 
@@ -577,6 +578,7 @@ form textarea{
         font-size: 16px; 
         text-align: center;  
     } 
+    /* HECHO */
     .workshops{
         margin-bottom: 16px;
         grid-template-columns: 90%;
@@ -671,17 +673,33 @@ form textarea{
         margin: 12px 0px;
     }
 }
-@media only screen and (min-width: 680px) and (max-width: 1199px){
+@media only screen and (min-width: 576px) and (max-width: 767px){
     header img{
-        margin: 0px 16px;
+        margin: 0px;
+    }
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .nav-item{
+        font-size: 24px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+    }
+    .dropdown-menu li{
+        border-bottom: solid 1px #afadad;
     }
     nav ul li{
-        width: auto;
-        font-size: 20px;
-        margin: 16px;  
+        margin: 0px;
+        text-align: left; 
+    }
+    .dropdown-item{
+        font-size: 22px;
+        margin: 8px 0px;
+        padding-left: 0;
     }
     .banner{
-        width: 100%;
         height: 100vh;
     }
     .banner h1{
@@ -693,18 +711,22 @@ form textarea{
     }
     @keyframes rebote {
         0% {
-            font-size: 80px;
+            font-size: 52px;
         }
         50% {
-            font-size: 86px;
+            font-size: 58px;
             text-shadow: 0 0 10px 10px #000;
         }
         100% {
-            font-size: 80px;
+            font-size: 52px;
         }
     }
     section{
         flex-direction: column;
+    }
+    #me{
+        flex-direction: column;
+        align-items: center;
     }
     .description{
         width: 100%;
@@ -716,51 +738,50 @@ form textarea{
         border: 3px solid #fff;
     }
     h1{
-        font-size: 42px;
-        margin-top: 0px;
-        padding: 16px 0px 0px 36px;
+        font-size: 40px;
+        margin-top: 36px;
+        padding: 24px 0px 16px 24px;
     }
     h2{
-        font-size: 32px;
-        font-weight: lighter;
-        padding-top: 16px;
-        padding-bottom: 24px;
+        font-size: 36px;
+        padding-top: 24px;
         text-align: center;
     }
     .subtitle{
-        margin-left:36px;
-        font-size: 26px;
+        margin-left: 24px;
+        font-size: 24px;
         text-align: left;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
     }
     p{
-        font-size: 16px;
+        font-size: 18px;
         text-align: center;
     }
     .textCenter{
         padding: 0px 16px;
     }
-    .items{
-        padding: 0px 16px;
+    .cardName{
+        font-size: 16px;
+    }
+    .cardService{
+        font-size: 16px;
     }
     .card-text{
         text-align: left;
     }
     footer{
-        height: auto;
         padding: 16px;
     }
     footer h3{
         font-size: 24px;
-        padding-bottom: 16px;
+        padding-bottom: 8px;
+        margin: 8px;
     }
     .newsletterInput{
-        width: 80%;
         text-align: center;
     }
-    .newsletterButton{
-        width: 60%;
-        margin-bottom: 24px;
+    .links{
+        margin: 8px;
     }
     .linkInstagram{
         height: 64px;
@@ -769,21 +790,31 @@ form textarea{
     .linkMail{
         height: 64px;
         width: 64px;
-    }    
+    } 
+    .services ul li a{
+        font-size: 20px;
+    }
+    .card-img-overlay{
+        padding: 28px;
+    }
+    .services .card-text{
+        font-size: 22px;
+    }
+    .highlight{
+        font-size: 24px; 
+        text-align: left; 
+        margin-bottom: 0px; 
+    }  
     #carouselWorkshops .carousel-inner{
         height: 80vh;
     }
     .carousel-caption{
         bottom: 5rem;
     }
-    .highlight{
-        font-size: 20px; 
-        text-align: left; 
-        margin-bottom: 0px; 
-    }  
     .carousel-caption .highlight{
         text-align: center;
     }
+    /* HECHO */
     form{
         padding: 36px;
     }
@@ -861,4 +892,132 @@ form textarea{
         margin: 12px 0px;
         font-size: 18px;
     }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    header img{
+        margin: 8px;
+    }
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .nav-item{
+        font-size: 28px;
+        margin: 8px 0px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+    }
+    .dropdown-menu li{
+        border-bottom: solid 1px #afadad;
+    }
+    nav ul li{
+        margin: 0px;
+        text-align: left; 
+    }
+    nav ul li{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px 20px;  
+    justify-content: flex-end;
+}
+    .dropdown-item{
+        font-size: 26px;
+        margin: 8px 0px;
+        padding-left: 0;
+    }
+    .banner{
+        height: 100vh;
+    }
+    .banner h1{
+        font-weight: 600;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    @keyframes rebote {
+        0% {
+            font-size: 74px;
+        }
+        50% {
+            font-size: 80px;
+            text-shadow: 0 0 10px 10px #000;
+        }
+        100% {
+            font-size: 74px;
+        }
+    }
+    section{
+        flex-direction: column;
+    }
+    #me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 320px;
+        height: 320px;
+        border: 3px solid #fff;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 56px;
+        padding-left: 36px;
+    }
+    h2{
+        padding-top: 32px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left:36px;
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 30px;
+        padding: 16px 0px;
+    }
+    p{
+        font-size: 22px;
+        text-align: center;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .cardName{
+        font-size: 22px;
+    }
+    .cardService{
+        font-size: 22px;
+    }
+    .card-text{
+        text-align: left;
+    }
+    footer{
+        padding: 24px;
+    }
+    footer h3{
+        font-size: 36px;
+        padding-bottom: 12px;
+        margin: 8px;
+    }
+    .links{
+        margin: 24px;
+    }
+    .services ul li a{
+        font-size: 20px;
+    }
+    .card-img-overlay{
+        padding: px;
+    }
+    .services .card-text{
+        font-size: 22px;
+    }
+    .highlight{
+        font-size: 24px; 
+        text-align: left; 
+        margin-bottom: 0px; 
+    }  
 }
