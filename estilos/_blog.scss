@@ -1,0 +1,128 @@
+/* BLOG  */
+.temas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.temas ul {
+    padding-left: 0px; 
+}
+.temas ul li{
+    list-style: none;
+    height: 64px;
+    display: inline-block;
+    text-align: center;
+    padding: 72px 0px 0px 48px;  
+}
+.temas ul li a{
+    color: #575757;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    padding: 16px 16px;
+    background-color: #efe4bf;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: box-shadow padding 1s;
+}
+.temas ul li a:hover{
+    box-shadow: 0 0 8px 4px #afadad;
+    padding: 18px 18px;
+}
+.container{
+    margin: 1%;
+}
+.blog .card{
+    padding: 12px;
+    flex-direction: column;
+    border: none;
+}
+.blog .col{
+    padding: 0px;
+}
+.img-container{
+    height: 18rem;
+    overflow: hidden;
+}
+.card-img-top{
+    border-radius: 0;
+}
+.btn-primary{
+    background-color: #575757;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    border: none;
+}
+h3{
+    margin: 24px 0px;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #575757
+}
+hr{
+    border-width: 3px;
+    border-color: #e0d09b;
+    width: 30%;
+}
+@media only screen and (max-width: 575px){
+    .temas{
+        padding: 24px 0px 0px 16px;
+    }
+    .temas ul li{
+        height: 36px;
+        padding: 0px 8px 0px 0px; 
+        margin-bottom: 8px; 
+    }
+    .temas ul li a{
+        font-size: 16px;
+        padding: 8px 8px;
+    }
+    .blog .card{
+        padding: 0;
+        margin: 0;
+    }
+    .blog{
+        padding: 0 16px;
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .temas{
+        padding: 24px 0px 0px 24px;
+    }
+    .temas ul li{
+        height: 36px;
+        padding: 0px 24px 0px 0px;  
+    }
+    .temas ul li a{
+        font-size: 16px;
+        padding: 8px 8px;
+    }
+    .blog .card{
+        padding: 0;
+        margin: 16px 0px;
+    }
+    .blog{
+        padding: 0px 24px;
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .temas ul li{
+        height: 56px;
+        padding: 56px 0px 0px 36px; 
+    }
+    .temas ul li a{
+        font-size: 18px;
+    }
+    .blog .card{
+        padding: 0;
+        margin: 24px 0px;
+    }
+    .blog{
+        padding: 0px 36px;
+        margin: 0;
+    }
+}

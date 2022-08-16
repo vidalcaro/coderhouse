@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+$color1: #747474;
+$color2: #fff;
+$color3: #000;
+$color4: #afadad;
+$color5: #575757;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+/* HEADER  */
+header{
+    height: 64px;
+    nav{
+        align-items: center;
+        background-color: $color2;
+        img{
+            height: 60px;
+            width: auto;
+            margin: 0px 36px 0px 36px;
+        }
+        ul li{
+            font-size: 30px;
+            text-align: center;
+            margin: 0px 16px;  
+            justify-content: flex-end;
+            a{
+                color: $color1;
+            }
+            a:hover{
+                color: $color3;
+                text-decoration: underline;
+                text-decoration-color: $color3;            
+            }
+        }
+        .dropdown-menu li:hover{
+            background-color: $color4;
+        }
+        .dropdown-item{
+            text-align: left;  
+            font-size: 26px; 
+            color: $color1;
+        }
+        .dropdown-item:hover{
+            text-decoration: none;
+        }
+        .navbar-toggler{
+            border: none;
+        }
+        .offcanvas-title{
+            color: $color5;
+        }
+    }
+}
+main{
+    height: auto;
+    width: 100%;    
+}
+h1{
+    color: $color5;
+    font-size: 68px;
+    font-weight: 600;
+    margin-top: 64px;
+    padding: 40px 0px 24px 48px;
+}
+h2{
+    font-size: 61px;
+    font-weight: lighter;
+    padding-bottom: 24px;
+    padding-top: 36px;
+}
+p{
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: $color5;
+}
+.textCenter{
+    padding: 0px 64px;
+}
+.banner{
+    width: 100%;
+    height: 1100px; 
+    background-size: cover;
+    background-position: bottom;
+    background-image: url(../multimedia/banner.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $color2;
+        font-size: 68px;
+        font-weight: 600;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 150px;
+        text-align: center;
+        animation-name: rebote;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 5s;
+    }
+}
+@keyframes rebote {
+    0% {
+        font-size: 76px;
+    }
+    50% {
+        font-size: 84px;
+        text-shadow: 0 0 10px 10px $color3;
+    }
+    100% {
+        font-size: 76px;
+    }
+}
+section{
+    width: 100%;
+    height: auto;
+    color: $color5;
+    display: flex;
+    align-items: center;
+    padding: 0px 24px 32px 24px;
+}
+#me{
+    background-color: #d6d6d6;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.picture{
+    width: 328px;
+    height: 328px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid $color2;
+    box-shadow: 0 0 10px 5px $color1;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+.description{
+    width: 60%;
+    height: auto;
+}
+#about{
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 80px 40px 80px;
+}
+
+#opinion{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+.carousel-inner{
+    width: 70%; 
+    height: 400px;
+    background-color: $color2; 
+    padding: 20px 0px;
+}
+.cardContent{
+    font-weight: lighter;
+    font-style: italic;
+}
+.cardName{
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.cardService{
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+footer{
+    background-image: url(../multimedia/low-poly-grid-haikei\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 36px;
+    h3{
+        font-size: 48px;
+        font-weight: lighter;
+    }
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    input{
+        height: 40px;
+        padding: 0px 16px 0px 16px;
+        border: 1px solid $color5;
+        border-radius: 5px;
+        margin: 8px;
+        font-size: 16px;
+    }
+}
+.newsletterButton{
+    height: 40px;
+    background-color: $color5;
+    color: $color2;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 8px;
+}
+.newsletterButton:hover{
+    box-shadow: 0 0 5px 5px $color4;
+}
+.newsletterButton:active{
+    background-color: #3e3e3e;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: $color5;
+    margin: 24px;
+}
+.linkInstagram{
+    margin-right: 24px;
+    height: 80px;
+    width: 80px;
+    background-image: url(../multimedia/icon_instagram.png);
+    background-size: cover;
+}
+.linkMail{
+    margin-left: 24px;
+    height: 80px;
+    width: 80px;
+    background-image: url(../multimedia/icon_email.png);
+    background-size: cover;
+}
+@media only screen and (max-width: 575px){
+    header img{
+        margin: 0px;
+    }
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .nav-item{
+        font-size: 20px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+    }
+    .dropdown-menu li{
+        border-bottom: solid 1px $color4;
+    }
+    nav ul li{
+        margin: 0px;
+        text-align: left; 
+    }
+    .dropdown-item{
+        font-size: 20px;
+        margin: 8px 0px;
+        padding-left: 0;
+    }
+    .banner{
+        height: 100vh;
+        h1{
+            font-size: 46px;
+            font-weight: 600;
+            width: auto;
+            height: auto;
+            padding: 0;
+        }
+    }
+    @keyframes rebote {
+        0% {
+            font-size: 46px;
+        }
+        50% {
+            font-size: 52px;
+            text-shadow: 0 0 10px 10px $color3;
+        }
+        100% {
+            font-size: 46px;
+        }
+    }
+    #me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 200px;
+        height: 200px;
+        border: 3px solid $color2;
+    }
+    h1{
+        font-size: 28px;
+        margin-top: 36px;
+        padding: 0px 0px 0px 16px;
+    }
+    h2{
+        font-size: 28px;
+        padding-top: 24px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left:16px;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom:8px;
+    }
+    p{
+        font-size: 16px;
+        text-align: center;
+    }
+    #about{
+        padding: 0px 24px 32px 24px;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .cardName{
+        font-size: 16px;
+    }
+    .cardService{
+        font-size: 16px;
+    }
+    footer{
+        padding: 16px;
+        h3{
+            font-size: 24px;
+            padding-bottom: 8px;
+            margin: 8px;
+        }
+    }
+    .newsletterInput{
+        text-align: center;
+    }
+    .links{
+        margin: 8px;
+    }
+    .linkInstagram{
+        height: 64px;
+        width: 64px;
+    }
+    .linkMail{
+        height: 64px;
+        width: 64px;
+    }   
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    header img{
+        margin: 0px;
+    }
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .nav-item{
+        font-size: 24px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+        li{
+            border-bottom: solid 1px $color4;
+        }
+    }
+    nav ul li{
+        margin: 0px;
+        text-align: left; 
+    }
+    .dropdown-item{
+        font-size: 22px;
+        margin: 8px 0px;
+        padding-left: 0;
+    }
+    .banner{
+        height: 100vh;
+        h1{
+            font-size: 48px;
+            font-weight: 600;
+            width: auto;
+            height: auto;
+            padding: 0;
+        }
+    }
+    @keyframes rebote {
+        0% {
+            font-size: 52px;
+        }
+        50% {
+            font-size: 58px;
+            text-shadow: 0 0 10px 10px $color3;
+        }
+        100% {
+            font-size: 52px;
+        }
+    }
+    section{
+        flex-direction: column;
+    }
+    #me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 300px;
+        height: 300px;
+        border: 3px solid $color2;
+    }
+    h1{
+        font-size: 40px;
+        margin-top: 36px;
+        padding: 24px 0px 16px 24px;
+    }
+    h2{
+        font-size: 36px;
+        padding-top: 24px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left: 24px;
+        font-size: 24px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 18px;
+        text-align: center;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .cardName{
+        font-size: 16px;
+    }
+    .cardService{
+        font-size: 16px;
+    }
+    .card-text{
+        text-align: left;
+    }
+    footer{
+        padding: 16px;
+        h3{
+            font-size: 24px;
+            padding-bottom: 8px;
+            margin: 8px;
+        }
+    }
+    .newsletterInput{
+        text-align: center;
+    }
+    .links{
+        margin: 8px;
+    }
+    .linkInstagram{
+        height: 64px;
+        width: 64px;
+    }
+    .linkMail{
+        height: 64px;
+        width: 64px;
+    } 
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    header img{
+        margin: 8px;
+    }
+    .navbar-nav{
+        padding-left: 16px;
+    }
+    .offcanvas-title{
+        font-size: 40px;
+    }
+    .nav-item{
+        font-size: 28px;
+        margin: 8px 0px;
+    }
+    .dropdown-menu{
+        border: none;
+        justify-content: center;
+        li{
+            border-bottom: solid 1px $color4;
+        }
+    }
+    .dropdown-item{
+        font-size: 26px;
+        margin: 8px 0px;
+        padding-left: 0;
+    }
+    .banner{
+        height: 100vh;
+    }
+    .banner h1{
+        font-weight: 600;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    @keyframes rebote {
+        0% {
+            font-size: 74px;
+        }
+        50% {
+            font-size: 80px;
+            text-shadow: 0 0 10px 10px $color3;
+        }
+        100% {
+            font-size: 74px;
+        }
+    }
+    section{
+        flex-direction: column;
+    }
+    #me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .description{
+        width: 100%;
+        padding: 0px 16px;
+    }
+    .picture{
+        width: 320px;
+        height: 320px;
+        border: 3px solid $color2;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 56px;
+        padding-left: 36px;
+    }
+    h2{
+        padding-top: 32px;
+        text-align: center;
+    }
+    .subtitle{
+        margin-left:36px;
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 30px;
+        padding: 16px 0px;
+    }
+    p{
+        font-size: 22px;
+        text-align: center;
+    }
+    .textCenter{
+        padding: 0px 16px;
+    }
+    .cardName{
+        font-size: 22px;
+    }
+    .cardService{
+        font-size: 22px;
+    }
+    .card-text{
+        text-align: left;
+    }
+    footer{
+        padding: 24px;
+    }
+    footer h3{
+        font-size: 36px;
+        padding-bottom: 12px;
+        margin: 8px;
+    }
+    .links{
+        margin: 24px;
+    }
+}
+@import "_servicios.scss";
+@import "_workshops.scss";
+@import "_blog.scss";
+@import "_contacto.scss";
