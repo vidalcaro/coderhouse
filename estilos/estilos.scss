@@ -10,7 +10,6 @@ $color5: #575757;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-/* HEADER  */
 header{
     height: 64px;
     nav{
@@ -509,13 +508,13 @@ footer{
     }
     .banner{
         height: 100vh;
-    }
-    .banner h1{
-        font-weight: 600;
-        width: auto;
-        height: auto;
-        padding: 0;
-    }
+        h1{
+            font-weight: 600;
+            width: auto;
+            height: auto;
+            padding: 0;
+        }
+    } 
     @keyframes rebote {
         0% {
             font-size: 74px;
@@ -578,12 +577,12 @@ footer{
     }
     footer{
         padding: 24px;
-    }
-    footer h3{
-        font-size: 36px;
-        padding-bottom: 12px;
-        margin: 8px;
-    }
+        h3{
+            font-size: 36px;
+            padding-bottom: 12px;
+            margin: 8px;
+        }
+    } 
     .links{
         margin: 24px;
     }
