@@ -50,35 +50,56 @@ header nav .offcanvas-title {
   color: #575757;
 }
 
-main {
-  height: auto;
-  width: 100%;
-}
-
 h1 {
   color: #575757;
   font-size: 68px;
+  letter-spacing: 1;
   font-weight: 600;
   margin-top: 64px;
   padding: 40px 0px 24px 48px;
 }
 
 h2 {
+  color: #575757;
   font-size: 61px;
-  font-weight: lighter;
+  letter-spacing: 1;
+  font-weight: 50;
   padding-bottom: 24px;
   padding-top: 36px;
 }
 
-p {
-  font-size: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
+h3 {
   color: #575757;
+  font-size: 26px;
+  letter-spacing: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.textCenter {
-  padding: 0px 64px;
+strong {
+  color: #575757;
+  font-size: 36px;
+  letter-spacing: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  color: #575757;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #575757;
+  font-size: 34px;
+  letter-spacing: 0.25px;
+  font-weight: 100;
+  margin-left: 48px;
+  margin-bottom: 40px;
 }
 
 .banner {
@@ -94,6 +115,7 @@ p {
 .banner h1 {
   color: #fff;
   font-size: 68px;
+  letter-spacing: 1;
   font-weight: 600;
   width: 100%;
   height: 200px;
@@ -197,10 +219,6 @@ footer {
   text-align: center;
   padding: 36px;
 }
-footer h3 {
-  font-size: 48px;
-  font-weight: lighter;
-}
 
 .newsletter {
   display: flex;
@@ -212,16 +230,17 @@ footer h3 {
   font-size: 16px;
   font-weight: bold;
 }
-.newsletter input {
+
+.input, .checkbox, form textarea, form input {
   height: 40px;
   padding: 0px 16px 0px 16px;
-  border: 1px solid #575757;
+  border: 1px solid #afadad;
   border-radius: 5px;
   margin: 8px;
   font-size: 16px;
 }
 
-.newsletterButton {
+.newsletterButton, .sendButton, .btn-primary {
   height: 40px;
   background-color: #575757;
   color: #fff;
@@ -233,11 +252,11 @@ footer h3 {
   margin: 8px;
 }
 
-.newsletterButton:hover {
+.newsletterButton:hover, .sendButton:hover, .btn-primary:hover {
   box-shadow: 0 0 5px 5px #afadad;
 }
 
-.newsletterButton:active {
+.newsletterButton:active, .sendButton:active, .btn-primary:active {
   background-color: #3e3e3e;
 }
 
@@ -607,19 +626,123 @@ footer h3 {
     margin: 24px;
   }
 }
-/* SERVICIOS  */
-.subtitle {
-  color: #575757;
-  margin-left: 48px;
-  font-size: 34px;
-  letter-spacing: 0.25px;
-  font-weight: 100;
-  margin-bottom: 40px;
+.servicio-asesoria {
+  background-image: url(../multimedia/s-asesoria.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-asesoria:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-colorimetria {
+  background-image: url(../multimedia/s-colorimetria.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-colorimetria:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-express {
+  background-image: url(../multimedia/s-express.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-express:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-looks {
+  background-image: url(../multimedia/s-looks.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-looks:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-shopping {
+  background-image: url(../multimedia/s-shopping.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-shopping:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-grupal {
+  background-image: url(../multimedia/s-grupal.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-grupal:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-guardarropas {
+  background-image: url(../multimedia/s-guardarropas.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-guardarropas:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
+}
+
+.servicio-eventos {
+  background-image: url(../multimedia/s-eventos.png);
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(70%);
+}
+.servicio-eventos:hover {
+  filter: grayscale(0%);
+  scale: 1.01;
+  box-shadow: 0px 5px 10px 0px #747474;
 }
 
 .services ul li a {
-  font-size: 26px;
   color: #575757;
+  font-size: 26px;
+  letter-spacing: 1;
+  font-weight: 200;
 }
 
 .row {
@@ -628,32 +751,28 @@ footer h3 {
 
 .card {
   margin-bottom: 1.5rem;
-  overflow: hidden;
 }
 
 .card-img-overlay {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: box-shadow 1s;
-}
-
-.card-img-overlay:hover {
-  box-shadow: 0 0 10px 4px #afadad;
 }
 
 .card-title {
   color: #575757;
-  text-transform: uppercase;
   font-size: 24px;
+  letter-spacing: 1;
   font-weight: 400;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .highlight {
   color: #575757;
   font-size: 24px;
-  font-weight: bold;
+  letter-spacing: 1;
+  font-weight: 1000;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -829,11 +948,7 @@ footer h3 {
 }
 
 .btn-primary {
-  background-color: #575757;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: 1.25px;
-  border: none;
+  width: auto;
 }
 
 h3 {
@@ -926,21 +1041,15 @@ form {
   width: 100%;
   padding: 64px 48px 48px 48px;
 }
-
 form label {
   color: #575757;
   font-size: 18px;
 }
-
 form input {
   width: 100%;
-  height: 40px;
-  border: 1px solid #d6d6d6;
-  border-radius: 5px;
   margin-bottom: 32px;
-  margin-top: 8px;
+  margin-left: 0px;
 }
-
 form select {
   color: #575757;
   font-size: 16px;
@@ -951,38 +1060,21 @@ form select {
   border: 1px solid #d6d6d6;
   border-radius: 5px;
 }
-
 form textarea {
   width: 100%;
   height: 160px;
-  border: 1px solid #d6d6d6;
-  border-radius: 5px;
   margin-bottom: 32px;
-  margin-top: 8px;
+  margin-left: 0px;
 }
 
 .checkbox {
   width: 24px;
   height: 24px;
-  border: 1px solid #d6d6d6;
-}
-
-.checkboxText {
-  font-size: 16px;
-  margin: 8px;
+  margin-bottom: 24px;
 }
 
 .sendButton {
   width: 228px;
-  height: 40px;
-  background-color: #575757;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1.25px;
-  border: 0px;
-  border-radius: 5px;
-  margin: 8px;
 }
 
 @media only screen and (max-width: 575px) {

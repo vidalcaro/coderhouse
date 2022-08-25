@@ -1,43 +1,50 @@
-/* SERVICIOS  */
-.subtitle{
-    color: #575757;
-    margin-left: 48px;
-    font-size: 34px;
-    letter-spacing: 0.25px;
-    font-weight: 100;
-    margin-bottom: 40px;
+$cards: (
+    asesoria: url(../multimedia/s-asesoria.png),
+    colorimetria: url(../multimedia/s-colorimetria.png),
+    express: url(../multimedia/s-express.png),
+    looks: url(../multimedia/s-looks.png),
+    shopping: url(../multimedia/s-shopping.png),
+    grupal: url(../multimedia/s-grupal.png),
+    guardarropas: url(../multimedia/s-guardarropas.png),
+    eventos: url(../multimedia/s-eventos.png),
+);
+
+@each $servicio, $imagen in $cards{
+    .servicio-#{$servicio} {
+        background-image: $imagen;
+        height: 700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(70%);
+        &:hover{
+            filter: grayscale(0%);
+            scale: 1.01;
+            box-shadow: 0px 5px 10px 0px $color1;
+        }
+    }
 }
 .services ul li a{
-    font-size: 26px;
-    color: #575757;
+    @include texto($color5, 26px, 1, 200);
 }
 .row{
     padding: 2rem;
 }
 .card{
     margin-bottom: 1.5rem;
-    overflow: hidden;
 }
 .card-img-overlay{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: box-shadow 1s; 
-}
-.card-img-overlay:hover{
-    box-shadow: 0 0 10px 4px #afadad;
 }
 .card-title{
-    color: #575757;
+    @include texto($color5, 24px, 1, 400);
     text-transform: uppercase;
-    font-size: 24px;
-    font-weight: 400;
     margin-bottom: 8px;
 }
 .highlight{
-    color: #575757;
-    font-size: 24px;
-    font-weight: bold;    
+    @include texto($color5, 24px, 1, 1000); 
 }
 @media only screen and (min-width: 576px) and (max-width: 767px){
     .services ul li a{

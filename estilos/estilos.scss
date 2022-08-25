@@ -53,31 +53,39 @@ header{
         }
     }
 }
-main{
-    height: auto;
-    width: 100%;    
+@mixin texto ($color, $size, $spacing, $weight) {
+    color: $color;    
+    font-size: $size;
+    letter-spacing: $spacing;
+    font-weight: $weight;
 }
 h1{
-    color: $color5;
-    font-size: 68px;
-    font-weight: 600;
+    @include texto($color5, 68px, 1, 600);
     margin-top: 64px;
     padding: 40px 0px 24px 48px;
 }
 h2{
-    font-size: 61px;
-    font-weight: lighter;
+    @include texto($color5, 61px, 1, 50);
     padding-bottom: 24px;
     padding-top: 36px;
 }
-p{
-    font-size: 24px;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    color: $color5;
+h3{
+    @include texto($color5, 26px, 1, 400);
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
-.textCenter{
-    padding: 0px 64px;
+strong{
+    @include texto($color5, 36px, 1, 400);
+    text-transform: uppercase;
+}
+p{
+    @include texto($color5, 24px, 0.5px, 100);
+    margin-bottom: 20px;
+}
+.subtitle{
+    @include texto($color5, 34px, 0.25px, 100);
+    margin-left: 48px;
+    margin-bottom: 40px;
 }
 .banner{
     width: 100%;
@@ -89,9 +97,7 @@ p{
     justify-content: center;
     align-items: center;
     h1{
-        color: $color2;
-        font-size: 68px;
-        font-weight: 600;
+        @include texto($color2, 68px, 1, 600);
         width: 100%;
         height: 200px;
         margin-bottom: 150px;
@@ -184,10 +190,6 @@ footer{
     justify-content: center;
     text-align: center;
     padding: 36px;
-    h3{
-        font-size: 48px;
-        font-weight: lighter;
-    }
 }
 .newsletter{
     display: flex;
@@ -198,14 +200,14 @@ footer{
         font-size: 16px;
         font-weight: bold;
     }
-    input{
-        height: 40px;
-        padding: 0px 16px 0px 16px;
-        border: 1px solid $color5;
-        border-radius: 5px;
-        margin: 8px;
-        font-size: 16px;
-    }
+}
+.input{
+    height: 40px;
+    padding: 0px 16px 0px 16px;
+    border: 1px solid $color4;
+    border-radius: 5px;
+    margin: 8px;
+    font-size: 16px; 
 }
 .newsletterButton{
     height: 40px;

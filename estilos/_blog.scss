@@ -49,11 +49,8 @@
     border-radius: 0;
 }
 .btn-primary{
-    background-color: #575757;
-    color: #fff;
-    font-size: 16px;
-    letter-spacing: 1.25px;
-    border: none;
+    @extend .newsletterButton;
+    width: auto;
 }
 h3{
     margin: 24px 0px;
