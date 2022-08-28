@@ -4,6 +4,7 @@ $color2: #fff;
 $color3: #000;
 $color4: #afadad;
 $color5: #575757;
+$color6: #efe4bf;
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ $color5: #575757;
     box-sizing: border-box;
 }
 header{
-    height: 64px;
+    height: 86px;
     nav{
         align-items: center;
         background-color: $color2;
@@ -47,6 +48,9 @@ header{
         }
         .navbar-toggler{
             border: none;
+            :hover{
+                background-color: $color4;
+            }
         }
         .offcanvas-title{
             color: $color5;
@@ -61,7 +65,7 @@ header{
 }
 h1{
     @include texto($color5, 68px, 1, 600);
-    margin-top: 64px;
+    margin-top: 48px;
     padding: 40px 0px 24px 48px;
 }
 h2{
@@ -84,8 +88,7 @@ p{
 }
 .subtitle{
     @include texto($color5, 34px, 0.25px, 100);
-    margin-left: 48px;
-    margin-bottom: 40px;
+    margin: 0px 48px 40px 48px;
 }
 .banner{
     width: 100%;
@@ -153,12 +156,15 @@ section{
     text-align: center;
     flex-direction: column;
     padding: 40px 80px 40px 80px;
+    margin-bottom: 24px;
 }
 
 #opinion{
     display: inline-block;
     justify-content: center;
     text-align: center;
+    box-shadow: inset 0px 25px 20px -20px $color4;
+    padding-top: 50px;
 }
 .carousel-inner{
     width: 70%; 
@@ -167,18 +173,15 @@ section{
     padding: 20px 0px;
 }
 .cardContent{
-    font-weight: lighter;
     font-style: italic;
 }
 .cardName{
     font-weight: bold;
     margin-bottom: 0;
-    font-size: 20px;
 }
 .cardService{
     font-style: italic;
-    margin-bottom: 0;
-    font-size: 20px;
+    margin: 0;
 }
 footer{
     background-image: url(../multimedia/low-poly-grid-haikei\ \(1\).png);
@@ -219,36 +222,32 @@ footer{
     border: 0px;
     border-radius: 5px;
     margin: 8px;
-}
-.newsletterButton:hover{
-    box-shadow: 0 0 5px 5px $color4;
-}
-.newsletterButton:active{
-    background-color: #3e3e3e;
+    &:hover{
+        box-shadow: $color4 0px 3px 8px;
+    }
+    &:active{
+        background-color: $color3;
+    }
 }
 .links{
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: $color5;
     margin: 24px;
 }
 .linkInstagram{
-    margin-right: 24px;
+    margin: 0px 24px;
     height: 80px;
     width: 80px;
     background-image: url(../multimedia/icon_instagram.png);
     background-size: cover;
 }
 .linkMail{
-    margin-left: 24px;
-    height: 80px;
-    width: 80px;
+    @extend .linkInstagram;
     background-image: url(../multimedia/icon_email.png);
-    background-size: cover;
 }
 @media only screen and (max-width: 575px){
-    header img{
+    header nav img{
         margin: 0px;
     }
     .navbar-nav{
@@ -260,9 +259,9 @@ footer{
     .dropdown-menu{
         border: none;
         justify-content: center;
-    }
-    .dropdown-menu li{
-        border-bottom: solid 1px $color4;
+        li{
+            border-bottom: solid 1px $color4;
+        }
     }
     nav ul li{
         margin: 0px;
@@ -319,14 +318,17 @@ footer{
         text-align: center;
     }
     .subtitle{
-        margin-left:16px;
+        margin: 0px 16px 24px 16px;
         font-size: 18px;
         text-align: left;
-        margin-bottom:8px;
     }
     p{
         font-size: 16px;
         text-align: center;
+        margin-bottom: 8px;
+    }
+    strong{
+        font-size: 22px;
     }
     #about{
         padding: 0px 24px 32px 24px;
@@ -360,11 +362,11 @@ footer{
     }
     .linkMail{
         height: 64px;
-        width: 64px;
+        width: 64px;;
     }   
 }
 @media only screen and (min-width: 576px) and (max-width: 767px){
-    header img{
+    header nav img{
         margin: 0px;
     }
     .navbar-nav{
@@ -438,14 +440,17 @@ footer{
         text-align: center;
     }
     .subtitle{
-        margin-left: 24px;
+        margin: 0px 24px 24px 24px;
         font-size: 24px;
         text-align: left;
-        margin-bottom: 24px;
     }
     p{
         font-size: 18px;
         text-align: center;
+        margin-bottom: 8px;
+    }
+    strong{
+        font-size: 24px;
     }
     .textCenter{
         padding: 0px 16px;
@@ -483,7 +488,7 @@ footer{
     } 
 }
 @media only screen and (min-width: 768px) and (max-width: 992px){
-    header img{
+    header nav img{
         margin: 8px;
     }
     .navbar-nav{
@@ -555,15 +560,14 @@ footer{
         text-align: center;
     }
     .subtitle{
-        margin-left:36px;
+        margin: 0px 36px 30px 36px;
         font-size: 26px;
         text-align: left;
-        margin-bottom: 30px;
-        padding: 16px 0px;
     }
     p{
         font-size: 22px;
         text-align: center;
+        margin-bottom: 16px;
     }
     .textCenter{
         padding: 0px 16px;

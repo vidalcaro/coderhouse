@@ -1,124 +1,229 @@
-/* BLOG  */
-.temas{
+$post: (1: url(../multimedia/blog1.jpg),
+    2: url(../multimedia/blog2.jpg),
+    3: url(../multimedia/blog3.jpg),
+);
+
+@each $entrada,
+$imagen in $post {
+    .card-#{$entrada} .img-container {
+        background-image: $imagen;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.temas {
     width: 100%;
     display: flex;
     align-items: center;
+
+    ul {
+        padding-left: 0px;
+
+        li {
+            list-style: none;
+            height: 64px;
+            display: inline-block;
+            text-align: center;
+            padding: 72px 0px 0px 48px;
+
+            a {
+                color: $color1;
+                font-size: 20px;
+                letter-spacing: 0.15px;
+                padding: 16px 16px;
+                background-color: $color6;
+                font-weight: 500;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 5px;
+                transition: box-shadow padding 1s;
+
+                &:hover {
+                    box-shadow: 0px 5px 10px 0px $color4;
+                }
+            }
+        }
+    }
 }
-.temas ul {
-    padding-left: 0px; 
-}
-.temas ul li{
-    list-style: none;
-    height: 64px;
-    display: inline-block;
-    text-align: center;
-    padding: 72px 0px 0px 48px;  
-}
-.temas ul li a{
-    color: #575757;
-    font-size: 20px;
-    letter-spacing: 0.15px;
-    padding: 16px 16px;
-    background-color: #efe4bf;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: box-shadow padding 1s;
-}
-.temas ul li a:hover{
-    box-shadow: 0 0 8px 4px #afadad;
-    padding: 18px 18px;
-}
-.container{
-    margin: 1%;
-}
-.blog .card{
-    padding: 12px;
+
+.card-1 {
+    padding: 28px;
     flex-direction: column;
     border: none;
+
+    .card-title {
+        @include texto($color5, 30px, 1, 400);
+        border-bottom: 3px solid $color6;
+        height: 135px;
+        width: 100vw;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 16px 0px;
+        text-align: left;
+    }
+
+    .card-header {
+        background-color: #efe4bf50;
+
+        p {
+            font-size: 18px;
+            margin: 0;
+            padding: 8px;
+            text-align: left;
+        }
+    }
+
+    .card-text {
+        padding-top: 16px;
+        text-align: left;
+    }
+
+    .btn {
+        @extend .newsletterButton;
+        width: auto;
+        margin: 0;
+
+        &:hover {
+            box-shadow: $color4 0px 3px 8px;
+            background-color: $color5;
+            color: $color2;
+        }
+
+        &:active {
+            background-color: $color3;
+        }
+    }
 }
-.blog .col{
+
+.card-2 {
+    @extend .card-1;
+}
+
+.card-3 {
+    @extend .card-1;
+}
+
+.blog .col {
     padding: 0px;
 }
-.img-container{
-    height: 18rem;
-    overflow: hidden;
-}
-.card-img-top{
-    border-radius: 0;
-}
-.btn-primary{
-    @extend .newsletterButton;
-    width: auto;
-}
-h3{
-    margin: 24px 0px;
-    text-transform: uppercase;
-    font-size: 28px;
-    color: #575757
-}
-hr{
-    border-width: 3px;
-    border-color: #e0d09b;
-    width: 30%;
-}
-@media only screen and (max-width: 575px){
-    .temas{
+
+@media only screen and (max-width: 575px) {
+    .temas {
         padding: 24px 0px 0px 16px;
+
+        ul li {
+            height: 36px;
+            padding: 0px 8px 0px 0px;
+            margin-bottom: 8px;
+
+            a {
+                font-size: 16px;
+                padding: 8px 8px;
+            }
+        }
     }
-    .temas ul li{
-        height: 36px;
-        padding: 0px 8px 0px 0px; 
-        margin-bottom: 8px; 
+
+    .card-1 {
+        padding: 0px;
+        margin-bottom: 24px;
+
+        .card-title {
+            font-size: 24px;
+            height: auto;
+        }
+
+        .card-header p {
+            font-size: 16px;
+            padding: 4px;
+        }
+
+        .card-text {
+            padding-top: 8px;
+        }
     }
-    .temas ul li a{
-        font-size: 16px;
-        padding: 8px 8px;
-    }
-    .blog .card{
-        padding: 0;
-        margin: 0;
-    }
-    .blog{
+
+    .blog {
         padding: 0 16px;
         margin: 0;
     }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px){
-    .temas{
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .temas {
         padding: 24px 0px 0px 24px;
+
+        ul li {
+            height: 36px;
+            padding: 0px 24px 0px 0px;
+
+            a {
+                font-size: 16px;
+                padding: 8px 8px;
+            }
+        }
     }
-    .temas ul li{
-        height: 36px;
-        padding: 0px 24px 0px 0px;  
+
+    .card-1 {
+        margin-bottom: 32px;
+        padding: 0px;
+
+        .card-title {
+            font-size: 24px;
+            height: auto;
+        }
+
+        .card-header p {
+            font-size: 16px;
+            padding: 8px;
+        }
+
+        .card-text {
+            padding-top: 8px;
+        }
     }
-    .temas ul li a{
-        font-size: 16px;
-        padding: 8px 8px;
-    }
-    .blog .card{
-        padding: 0;
-        margin: 16px 0px;
-    }
-    .blog{
+
+    .blog {
         padding: 0px 24px;
         margin: 0;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px){
-    .temas ul li{
-        height: 56px;
-        padding: 56px 0px 0px 36px; 
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .temas {
+        padding-bottom: 32px;
+
+        ul li {
+            height: 56px;
+            padding: 56px 0px 0px 36px;
+
+            a {
+                font-size: 18px;
+            }
+        }
     }
-    .temas ul li a{
-        font-size: 18px;
+
+    .card-1 {
+        margin-bottom: 48px;
+        padding: 0px;
+
+        .card-title {
+            height: auto;
+            padding: 24px 0px;
+        }
+
+        .card-header p {
+            padding: 12px;
+        }
+
+        .card-text {
+            padding-top: 8px;
+        }
     }
-    .blog .card{
-        padding: 0;
-        margin: 24px 0px;
-    }
-    .blog{
+
+    .blog {
         padding: 0px 36px;
         margin: 0;
     }

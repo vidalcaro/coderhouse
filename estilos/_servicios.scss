@@ -1,5 +1,4 @@
-$cards: (
-    asesoria: url(../multimedia/s-asesoria.png),
+$cards: (asesoria: url(../multimedia/s-asesoria.png),
     colorimetria: url(../multimedia/s-colorimetria.png),
     express: url(../multimedia/s-express.png),
     looks: url(../multimedia/s-looks.png),
@@ -9,7 +8,8 @@ $cards: (
     eventos: url(../multimedia/s-eventos.png),
 );
 
-@each $servicio, $imagen in $cards{
+@each $servicio,
+$imagen in $cards {
     .servicio-#{$servicio} {
         background-image: $imagen;
         height: 700px;
@@ -17,64 +17,182 @@ $cards: (
         background-repeat: no-repeat;
         background-position: center;
         filter: grayscale(70%);
-        &:hover{
+
+        &:hover {
             filter: grayscale(0%);
             scale: 1.01;
             box-shadow: 0px 5px 10px 0px $color1;
         }
+
+        &:active {
+            filter: grayscale(0%);
+            scale: 1.01;
+            box-shadow: 0px 10px 20px 0px $color1;
+        }
     }
 }
-.services ul li a{
+
+ul.breadcrumb {
+    margin-left: 32px;
+    padding: 24px 16px;
+    list-style: none;
+
+    li {
+        display: inline;
+        @include texto($color5, 22px, 1, 500);
+
+        a {
+            color: $color4;
+            text-decoration: none;
+            font-weight: 100;
+
+            &:hover {
+                color: $color3;
+                font-weight: 500;
+            }
+        }
+    }
+
+    li+li:before {
+        padding: 8px;
+        color: $color5;
+        content: ">\00a0";
+    }
+}
+
+.nav-tabs li a {
     @include texto($color5, 26px, 1, 200);
 }
-.row{
-    padding: 2rem;
+
+.row {
+    padding: 1.5rem;
+    margin: 0;
 }
-.card{
+
+.card {
     margin-bottom: 1.5rem;
+
+    p {
+        text-align: left;
+    }
 }
-.card-img-overlay{
+
+.card-img-overlay {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
-.card-title{
+
+.card-title {
     @include texto($color5, 24px, 1, 400);
     text-transform: uppercase;
     margin-bottom: 8px;
+    text-align: left;
+    padding: 16px 0px;
 }
-.highlight{
-    @include texto($color5, 24px, 1, 1000); 
+
+.highlight {
+    @include texto($color5, 24px, 1, 1000);
 }
-@media only screen and (min-width: 576px) and (max-width: 767px){
-    .services ul li a{
+
+@media only screen and (max-width: 575px) {
+    ul.breadcrumb {
+        margin-left: 16px;
+        padding: 16px 8px;
+
+        li {
+            font-size: 16px;
+        }
+    }
+
+    .nav-tabs li a {
+        font-size: 18px;
+    }
+
+    @each $servicio,
+    $imagen in $cards {
+        .servicio-#{$servicio} {
+            height: 500px;
+        }
+    }
+
+    .card-title {
         font-size: 20px;
+        padding: 8px 0px;
     }
-    .card-img-overlay{
-        padding: 28px;
+
+    .highlight {
+        font-size: 20px;
+        margin-bottom: 0px;
     }
-    .services .card-text{
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    ul.breadcrumb {
+        margin-left: 16px;
+        padding: 16px 8px;
+
+        li {
+            font-size: 22px;
+        }
+    }
+
+    .nav-tabs li a {
         font-size: 22px;
     }
-    .highlight{
-        font-size: 24px; 
-        text-align: left; 
-        margin-bottom: 0px; 
-    }  
+
+    @each $servicio,
+    $imagen in $cards {
+        .servicio-#{$servicio} {
+            height: 600px;
+        }
+    }
+
+    .card-title {
+        font-size: 24px;
+        padding: 12px 0px;
+        margin: 0;
+    }
+
+    .card-img-overlay {
+        padding: 16px;
+    }
+
+    .highlight {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px){
-    .services ul li a{
-        font-size: 20px;
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    ul.breadcrumb {
+        margin-left: 16px;
+        padding: 16px 8px;
+
+        li {
+            font-size: 22px;
+        }
     }
-    .card-img-overlay{
-        padding: px;
-    }
-    .services .card-text{
+
+    .nav-tabs li a {
         font-size: 22px;
     }
-    .highlight{
-        font-size: 24px; 
-        text-align: left; 
-        margin-bottom: 0px; 
-    }  
+
+    @each $servicio,
+    $imagen in $cards {
+        .servicio-#{$servicio} {
+            height: 500px;
+        }
+    }
+
+    .card-title {
+        font-size: 24px;
+        padding: 12px 0px;
+        margin: 0;
+    }
+
+    .highlight {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
 }
