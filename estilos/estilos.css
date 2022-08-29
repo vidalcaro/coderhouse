@@ -234,7 +234,7 @@ footer {
   font-weight: bold;
 }
 
-.input, .checkbox, form textarea, form input {
+.input, .checkbox input, form textarea, form input {
   height: 40px;
   padding: 0px 16px 0px 16px;
   border: 1px solid #afadad;
@@ -943,7 +943,7 @@ ul.breadcrumb li + li:before {
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   ul.breadcrumb {
-    margin-left: 16px;
+    margin-left: 28px;
     padding: 16px 8px;
   }
   ul.breadcrumb li {
@@ -986,28 +986,30 @@ ul.breadcrumb li + li:before {
     margin-bottom: 0px;
   }
 }
-/* WORKSHOPS  */
 #carouselWorkshops .carousel-inner {
-  display: flex;
   height: 90vh;
   width: 100%;
   padding: 0px 40px;
   margin-bottom: 40px;
-  align-content: center;
-  align-items: center;
 }
 
 .carousel-caption {
-  bottom: 20rem;
-  background-color: rgba(255, 255, 255, 0.47);
+  background-color: rgba(255, 255, 255, 0.66);
 }
-
 .carousel-caption h2 {
+  color: #575757;
   font-size: 50px;
+  letter-spacing: 1;
+  font-weight: 400;
+  text-transform: uppercase;
 }
-
 .carousel-caption .highlight {
   font-size: 28px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 4rem;
+  height: 4rem;
 }
 
 @media only screen and (max-width: 575px) {
@@ -1018,23 +1020,28 @@ ul.breadcrumb li + li:before {
   .carousel-caption {
     bottom: 10rem;
   }
-  .carousel-item {
-    overflow: hidden;
-  }
-  .carousel-item img {
-    width: 150% !important;
-  }
   .carousel-caption h2 {
     font-size: 30px;
   }
   .carousel-caption .highlight {
     font-size: 20px;
-    text-align: center;
+  }
+  .carousel-item {
+    overflow: hidden;
+  }
+  .carousel-item img {
+    width: auto !important;
+    height: 60vh;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   #carouselWorkshops .carousel-inner {
     height: 60vh;
+    padding: 0px 24px;
   }
   .carousel-caption {
     bottom: 3rem;
@@ -1043,24 +1050,38 @@ ul.breadcrumb li + li:before {
     font-size: 40px;
   }
   .carousel-caption .highlight {
-    text-align: center;
+    font-size: 26px;
   }
-  #workshops .subtitle {
-    margin-bottom: 0px;
+  .carousel-item {
+    overflow: hidden;
+  }
+  .carousel-item img {
+    width: auto !important;
+    height: 60vh;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   #carouselWorkshops .carousel-inner {
     height: 80vh;
+    padding: 0px 36px;
   }
   .carousel-caption {
     bottom: 5rem;
   }
-  .carousel-caption .highlight {
-    text-align: center;
+  .carousel-item {
+    overflow: hidden;
   }
-  #workshops .subtitle {
-    margin-bottom: 0px;
+  .carousel-item img {
+    width: auto !important;
+    height: 80vh;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
   }
 }
 .card-1 .img-container, .card-3 .img-container, .card-2 .img-container {
@@ -1261,7 +1282,6 @@ ul.breadcrumb li + li:before {
     margin: 0;
   }
 }
-/* CONTACTO  */
 .contactoMain {
   background-image: url(../multimedia/main_background.png);
   background-position: top;
@@ -1287,6 +1307,15 @@ form input {
   margin-bottom: 32px;
   margin-left: 0px;
 }
+form input:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+form input:focus {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  outline: none;
+  border: none;
+  scale: 1.01;
+}
 form select {
   color: #575757;
   font-size: 16px;
@@ -1297,21 +1326,40 @@ form select {
   border: 1px solid #d6d6d6;
   border-radius: 5px;
 }
+form select:focus {
+  outline: none;
+}
 form textarea {
   width: 100%;
   height: 160px;
   margin-bottom: 32px;
   margin-left: 0px;
 }
+form textarea:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+form textarea:focus {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  outline: none;
+  border: none;
+  scale: 1.01;
+}
 
-.checkbox {
+.checkbox input {
+  display: inline-block;
   width: 24px;
   height: 24px;
-  margin-bottom: 24px;
+  margin: 0px 8px 24px 0px;
+}
+.checkbox input:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.checkbox input:focus {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .sendButton {
-  width: 228px;
+  width: 20%;
 }
 
 @media only screen and (max-width: 575px) {
@@ -1327,6 +1375,10 @@ form textarea {
   .checkboxText {
     margin: 0px;
   }
+  .sendButton {
+    width: 100%;
+    margin: 16px 0px;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   form {
@@ -1337,6 +1389,19 @@ form textarea {
   }
   form input {
     margin-bottom: 16px;
+  }
+  .sendButton {
+    width: 100%;
+    margin: 16px 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  form {
+    padding: 36px;
+  }
+  .sendButton {
+    width: 100%;
+    margin: 16px 0px;
   }
 }
 

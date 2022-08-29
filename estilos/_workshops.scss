@@ -1,76 +1,119 @@
-/* WORKSHOPS  */
-#carouselWorkshops .carousel-inner{
-    display: flex;
+#carouselWorkshops .carousel-inner {
     height: 90vh;
     width: 100%;
     padding: 0px 40px;
     margin-bottom: 40px;
-    align-content: center;
-    align-items: center;
 }
-.carousel-caption{
-    bottom:20rem;
-    background-color: rgba(255, 255, 255, 0.47);
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.66);
+
+    h2 {
+        @include texto($color5, 50px, 1, 400);
+        text-transform: uppercase;
+    }
+
+    .highlight {
+        font-size: 28px;
+    }
 }
-.carousel-caption h2{
-    font-size: 50px;
+
+.carousel-control-prev-icon {
+    width: 4rem;
+    height: 4rem;
 }
-.carousel-caption .highlight{
-    font-size: 28px;
+
+.carousel-control-next-icon {
+    @extend .carousel-control-prev-icon;
 }
-@media only screen and (max-width: 575px){  
-    #carouselWorkshops .carousel-inner{
+
+@media only screen and (max-width: 575px) {
+    #carouselWorkshops .carousel-inner {
         height: 60vh;
         padding: 0px 16px;
     }
-    .carousel-caption{
+
+    .carousel-caption {
         bottom: 10rem;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .highlight {
+            font-size: 20px;
+        }
     }
-    .carousel-item{
+
+    .carousel-item {
         overflow: hidden;
-    } 
-    .carousel-item img{
-        width: 150%!important; 
+
+        img {
+            width: auto !important;
+            height: 60vh;
+        }
     }
-    // .services ul li a{
-    //     font-size: 18px;
-    // }
-    .carousel-caption h2{
-        font-size: 30px;   
-    } 
-    .carousel-caption .highlight{
-        font-size: 20px; 
-        text-align: center;  
-    } 
+
+    .carousel-control-prev-icon {
+        width: 2rem;
+        height: 2rem;
+    }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px){
-    #carouselWorkshops .carousel-inner{
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #carouselWorkshops .carousel-inner {
         height: 60vh;
+        padding: 0px 24px;
     }
-    .carousel-caption{
+
+    .carousel-caption {
         bottom: 3rem;
+
+        h2 {
+            font-size: 40px;
+        }
+
+        .highlight {
+            font-size: 26px;
+        }
     }
-    .carousel-caption h2{
-        font-size: 40px;
+
+    .carousel-item {
+        overflow: hidden;
+
+        img {
+            width: auto !important;
+            height: 60vh;
+        }
     }
-    .carousel-caption .highlight{
-        text-align: center;
-    }
-    #workshops .subtitle{
-        margin-bottom: 0px;
+
+    .carousel-control-prev-icon {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px){ 
-    #carouselWorkshops .carousel-inner{
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    #carouselWorkshops .carousel-inner {
         height: 80vh;
+        padding: 0px 36px;
     }
-    .carousel-caption{
+
+    .carousel-caption {
         bottom: 5rem;
     }
-    .carousel-caption .highlight{
-        text-align: center;
+
+    .carousel-item {
+        overflow: hidden;
+
+        img {
+            width: auto !important;
+            height: 80vh;
+        }
     }
-    #workshops .subtitle{
-        margin-bottom: 0px;
+
+    .carousel-control-prev-icon {
+        width: 3rem;
+        height: 3rem;
     }
 }
