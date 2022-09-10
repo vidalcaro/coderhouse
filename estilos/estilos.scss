@@ -5,101 +5,123 @@ $color3: #000;
 $color4: #afadad;
 $color5: #575757;
 $color6: #efe4bf;
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
-header{
+
+header {
     height: 86px;
-    nav{
+
+    nav {
         align-items: center;
         background-color: $color2;
-        img{
+
+        img {
             height: 60px;
             width: auto;
             margin: 0px 36px 0px 36px;
         }
-        ul li{
+
+        ul li {
             font-size: 30px;
             text-align: center;
-            margin: 0px 16px;  
+            margin: 0px 16px;
             justify-content: flex-end;
-            a{
+
+            a {
                 color: $color1;
             }
-            a:hover{
+
+            a:hover {
                 color: $color3;
                 text-decoration: underline;
-                text-decoration-color: $color3;            
+                text-decoration-color: $color3;
             }
         }
-        .dropdown-menu li:hover{
+
+        .dropdown-menu li:hover {
             background-color: $color4;
         }
-        .dropdown-item{
-            text-align: left;  
-            font-size: 26px; 
+
+        .dropdown-item {
+            text-align: left;
+            font-size: 26px;
             color: $color1;
         }
-        .dropdown-item:hover{
+
+        .dropdown-item:hover {
             text-decoration: none;
         }
-        .navbar-toggler{
+
+        .navbar-toggler {
             border: none;
-            :hover{
+
+            :hover {
                 background-color: $color4;
             }
         }
-        .offcanvas-title{
+
+        .offcanvas-title {
             color: $color5;
         }
     }
 }
+
 @mixin texto ($color, $size, $spacing, $weight) {
-    color: $color;    
+    color: $color;
     font-size: $size;
     letter-spacing: $spacing;
     font-weight: $weight;
 }
-h1{
+
+h1 {
     @include texto($color5, 68px, 1, 600);
     margin-top: 48px;
     padding: 40px 0px 24px 48px;
 }
-h2{
+
+h2 {
     @include texto($color5, 61px, 1, 50);
     padding-bottom: 24px;
     padding-top: 36px;
 }
-h3{
+
+h3 {
     @include texto($color5, 26px, 1, 400);
     text-transform: uppercase;
     margin-bottom: 8px;
 }
-strong{
+
+strong {
     @include texto($color5, 36px, 1, 400);
     text-transform: uppercase;
 }
-p{
+
+p {
     @include texto($color5, 24px, 0.5px, 100);
     margin-bottom: 20px;
 }
-.subtitle{
+
+.subtitle {
     @include texto($color5, 34px, 0.25px, 100);
     margin: 0px 48px 40px 48px;
 }
-.banner{
+
+.banner {
     width: 100%;
-    height: 1100px; 
+    height: 1100px;
     background-size: cover;
     background-position: bottom;
     background-image: url(../multimedia/banner.png);
     display: flex;
     justify-content: center;
     align-items: center;
-    h1{
+
+    h1 {
         @include texto($color2, 68px, 1, 600);
         width: 100%;
         height: 200px;
@@ -111,19 +133,23 @@ p{
         animation-duration: 5s;
     }
 }
+
 @keyframes rebote {
     0% {
         font-size: 76px;
     }
+
     50% {
         font-size: 84px;
         text-shadow: 0 0 10px 10px $color3;
     }
+
     100% {
         font-size: 76px;
     }
 }
-section{
+
+section {
     width: 100%;
     height: auto;
     color: $color5;
@@ -131,59 +157,69 @@ section{
     align-items: center;
     padding: 0px 24px 32px 24px;
 }
-#me{
+
+#me {
     background-color: #d6d6d6;
     justify-content: space-evenly;
     align-items: flex-start;
 }
-.picture{
+
+.picture {
     width: 328px;
     height: 328px;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid $color2;
     box-shadow: 0 0 10px 5px $color1;
-    img{
+
+    img {
         width: 100%;
         height: auto;
     }
 }
-.description{
+
+.description {
     width: 60%;
     height: auto;
 }
-#about{
+
+#about {
     text-align: center;
     flex-direction: column;
     padding: 40px 80px 40px 80px;
     margin-bottom: 24px;
 }
 
-#opinion{
+#opinion {
     display: inline-block;
     justify-content: center;
     text-align: center;
     box-shadow: inset 0px 25px 20px -20px $color4;
     padding-top: 50px;
 }
-.carousel-inner{
-    width: 70%; 
+
+.carousel-inner {
+    width: 70%;
     height: 400px;
-    background-color: $color2; 
+    background-color: $color2;
     padding: 20px 0px;
 }
-.cardContent{
+
+.cardContent {
     font-style: italic;
 }
-.cardName{
+
+.cardName {
     font-weight: bold;
     margin-bottom: 0;
 }
-.cardService{
+
+.cardService {
     font-style: italic;
     margin: 0;
 }
-footer{
+
+footer {
     background-image: url(../multimedia/low-poly-grid-haikei\ \(1\).png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -194,25 +230,29 @@ footer{
     text-align: center;
     padding: 36px;
 }
-.newsletter{
+
+.newsletter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    label{
+
+    label {
         font-size: 16px;
         font-weight: bold;
     }
 }
-.input{
+
+.input {
     height: 40px;
     padding: 0px 16px 0px 16px;
     border: 1px solid $color4;
     border-radius: 5px;
     margin: 8px;
-    font-size: 16px; 
+    font-size: 16px;
 }
-.newsletterButton{
+
+.newsletterButton {
     height: 40px;
     background-color: $color5;
     color: $color2;
@@ -222,59 +262,97 @@ footer{
     border: 0px;
     border-radius: 5px;
     margin: 8px;
-    &:hover{
+
+    &:hover {
         box-shadow: $color4 0px 3px 8px;
     }
-    &:active{
+
+    &:active {
         background-color: $color3;
     }
 }
-.links{
+
+.links {
     display: flex;
     justify-content: center;
     text-decoration: none;
     margin: 24px;
 }
-.linkInstagram{
+
+.linkInstagram {
     margin: 0px 24px;
     height: 80px;
     width: 80px;
     background-image: url(../multimedia/icon_instagram.png);
     background-size: cover;
 }
-.linkMail{
+
+.linkMail {
     @extend .linkInstagram;
     background-image: url(../multimedia/icon_email.png);
 }
-@media only screen and (max-width: 575px){
-    header nav img{
+
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $color4;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: $color1;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+}
+
+@media only screen and (max-width: 575px) {
+    header nav img {
         margin: 0px;
     }
-    .navbar-nav{
+
+    .navbar-nav {
         padding-left: 16px;
     }
-    .nav-item{
+
+    .nav-item {
         font-size: 20px;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         border: none;
         justify-content: center;
-        li{
+
+        li {
             border-bottom: solid 1px $color4;
         }
     }
-    nav ul li{
+
+    nav ul li {
         margin: 0px;
-        text-align: left; 
+        text-align: left;
     }
-    .dropdown-item{
+
+    .dropdown-item {
         font-size: 20px;
         margin: 8px 0px;
         padding-left: 0;
     }
-    .banner{
+
+    .banner {
         height: 100vh;
-        h1{
+
+        h1 {
             font-size: 46px;
             font-weight: 600;
             width: auto;
@@ -282,118 +360,153 @@ footer{
             padding: 0;
         }
     }
+
     @keyframes rebote {
         0% {
             font-size: 46px;
         }
+
         50% {
             font-size: 52px;
             text-shadow: 0 0 10px 10px $color3;
         }
+
         100% {
             font-size: 46px;
         }
     }
-    #me{
+
+    #me {
         flex-direction: column;
         align-items: center;
     }
-    .description{
+
+    .description {
         width: 100%;
         padding: 0px 16px;
     }
-    .picture{
+
+    .picture {
         width: 200px;
         height: 200px;
         border: 3px solid $color2;
     }
-    h1{
+
+    h1 {
         font-size: 28px;
         margin-top: 36px;
         padding: 0px 0px 0px 16px;
     }
-    h2{
+
+    h2 {
         font-size: 28px;
         padding-top: 24px;
         text-align: center;
     }
-    .subtitle{
+
+    .subtitle {
         margin: 0px 16px 24px 16px;
         font-size: 18px;
         text-align: left;
     }
-    p{
+
+    p {
         font-size: 16px;
         text-align: center;
         margin-bottom: 8px;
     }
-    strong{
+
+    strong {
         font-size: 22px;
     }
-    #about{
+
+    #about {
         padding: 0px 24px 32px 24px;
     }
-    .textCenter{
+
+    .textCenter {
         padding: 0px 16px;
     }
-    .cardName{
+
+    .cardName {
         font-size: 16px;
     }
-    .cardService{
+
+    .cardService {
         font-size: 16px;
     }
-    footer{
+
+    footer {
         padding: 16px;
-        h3{
+
+        h3 {
             font-size: 24px;
             padding-bottom: 8px;
             margin: 8px;
         }
     }
-    .newsletterInput{
+
+    .newsletterInput {
         text-align: center;
     }
-    .links{
+
+    .links {
         margin: 8px;
     }
-    .linkInstagram{
+
+    .linkInstagram {
         height: 64px;
         width: 64px;
     }
-    .linkMail{
+
+    .linkMail {
         height: 64px;
-        width: 64px;;
-    }   
+        width: 64px;
+        ;
+    }
+
+    body::-webkit-scrollbar {
+        width: 8px;
+    }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px){
-    header nav img{
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    header nav img {
         margin: 0px;
     }
-    .navbar-nav{
+
+    .navbar-nav {
         padding-left: 16px;
     }
-    .nav-item{
+
+    .nav-item {
         font-size: 24px;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         border: none;
         justify-content: center;
-        li{
+
+        li {
             border-bottom: solid 1px $color4;
         }
     }
-    nav ul li{
+
+    nav ul li {
         margin: 0px;
-        text-align: left; 
+        text-align: left;
     }
-    .dropdown-item{
+
+    .dropdown-item {
         font-size: 22px;
         margin: 8px 0px;
         padding-left: 0;
     }
-    .banner{
+
+    .banner {
         height: 100vh;
-        h1{
+
+        h1 {
             font-size: 48px;
             font-weight: 600;
             width: auto;
@@ -401,198 +514,256 @@ footer{
             padding: 0;
         }
     }
+
     @keyframes rebote {
         0% {
             font-size: 52px;
         }
+
         50% {
             font-size: 58px;
             text-shadow: 0 0 10px 10px $color3;
         }
+
         100% {
             font-size: 52px;
         }
     }
-    section{
+
+    section {
         flex-direction: column;
     }
-    #me{
+
+    #me {
         flex-direction: column;
         align-items: center;
     }
-    .description{
+
+    .description {
         width: 100%;
         padding: 0px 16px;
     }
-    .picture{
+
+    .picture {
         width: 300px;
         height: 300px;
         border: 3px solid $color2;
     }
-    h1{
+
+    h1 {
         font-size: 40px;
         margin-top: 36px;
         padding: 24px 0px 16px 24px;
     }
-    h2{
+
+    h2 {
         font-size: 36px;
         padding-top: 24px;
         text-align: center;
     }
-    .subtitle{
+
+    .subtitle {
         margin: 0px 24px 24px 24px;
         font-size: 24px;
         text-align: left;
     }
-    p{
+
+    p {
         font-size: 18px;
         text-align: center;
         margin-bottom: 8px;
     }
-    strong{
+
+    strong {
         font-size: 24px;
     }
-    .textCenter{
+
+    .textCenter {
         padding: 0px 16px;
     }
-    .cardName{
+
+    .cardName {
         font-size: 16px;
     }
-    .cardService{
+
+    .cardService {
         font-size: 16px;
     }
-    .card-text{
+
+    .card-text {
         text-align: left;
     }
-    footer{
+
+    footer {
         padding: 16px;
-        h3{
+
+        h3 {
             font-size: 24px;
             padding-bottom: 8px;
             margin: 8px;
         }
     }
-    .newsletterInput{
+
+    .newsletterInput {
         text-align: center;
     }
-    .links{
+
+    .links {
         margin: 8px;
     }
-    .linkInstagram{
+
+    .linkInstagram {
         height: 64px;
         width: 64px;
     }
-    .linkMail{
+
+    .linkMail {
         height: 64px;
         width: 64px;
-    } 
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px){
-    header nav img{
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    header nav img {
         margin: 8px;
     }
-    .navbar-nav{
+
+    .navbar-nav {
         padding-left: 16px;
     }
-    .offcanvas-title{
+
+    .offcanvas-title {
         font-size: 40px;
     }
-    .nav-item{
+
+    .nav-item {
         font-size: 28px;
         margin: 8px 0px;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         border: none;
         justify-content: center;
-        li{
+
+        li {
             border-bottom: solid 1px $color4;
         }
     }
-    .dropdown-item{
+
+    .dropdown-item {
         font-size: 26px;
         margin: 8px 0px;
         padding-left: 0;
     }
-    .banner{
+
+    .banner {
         height: 100vh;
-        h1{
+
+        h1 {
             font-weight: 600;
             width: auto;
             height: auto;
             padding: 0;
         }
-    } 
+    }
+
     @keyframes rebote {
         0% {
             font-size: 74px;
         }
+
         50% {
             font-size: 80px;
             text-shadow: 0 0 10px 10px $color3;
         }
+
         100% {
             font-size: 74px;
         }
     }
-    section{
+
+    section {
         flex-direction: column;
     }
-    #me{
+
+    #me {
         flex-direction: column;
         align-items: center;
     }
-    .description{
+
+    .description {
         width: 100%;
         padding: 0px 16px;
     }
-    .picture{
+
+    .picture {
         width: 320px;
         height: 320px;
         border: 3px solid $color2;
     }
-    h1{
+
+    h1 {
         margin-top: 20px;
         font-size: 56px;
         padding-left: 36px;
     }
-    h2{
+
+    h2 {
         padding-top: 32px;
         text-align: center;
     }
-    .subtitle{
+
+    .subtitle {
         margin: 0px 36px 30px 36px;
         font-size: 26px;
         text-align: left;
     }
-    p{
+
+    p {
         font-size: 22px;
         text-align: center;
         margin-bottom: 16px;
     }
-    .textCenter{
+
+    .textCenter {
         padding: 0px 16px;
     }
-    .cardName{
+
+    .cardName {
         font-size: 22px;
     }
-    .cardService{
+
+    .cardService {
         font-size: 22px;
     }
-    .card-text{
+
+    .card-text {
         text-align: left;
     }
-    footer{
+
+    footer {
         padding: 24px;
-        h3{
+
+        h3 {
             font-size: 36px;
             padding-bottom: 12px;
             margin: 8px;
         }
-    } 
-    .links{
+    }
+
+    .links {
         margin: 24px;
     }
+
+    body::-webkit-scrollbar {
+        width: 12px;
+    }
 }
+
 @import "_servicios.scss";
 @import "_workshops.scss";
 @import "_blog.scss";

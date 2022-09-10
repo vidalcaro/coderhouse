@@ -234,7 +234,7 @@ footer {
   font-weight: bold;
 }
 
-.input, .checkbox input, form textarea, form input {
+.input, form textarea, form input {
   height: 40px;
   padding: 0px 16px 0px 16px;
   border: 1px solid #afadad;
@@ -278,6 +278,30 @@ footer {
 
 .linkMail {
   background-image: url(../multimedia/icon_email.png);
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #afadad;
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #747474;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }
 
 @media only screen and (max-width: 575px) {
@@ -397,6 +421,9 @@ footer {
   .linkMail {
     height: 64px;
     width: 64px;
+  }
+  body::-webkit-scrollbar {
+    width: 8px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -520,6 +547,9 @@ footer {
     height: 64px;
     width: 64px;
   }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   header nav img {
@@ -625,6 +655,9 @@ footer {
   }
   .links {
     margin: 24px;
+  }
+  body::-webkit-scrollbar {
+    width: 12px;
   }
 }
 .servicio-asesoria {
@@ -1345,21 +1378,47 @@ form textarea:focus {
   scale: 1.01;
 }
 
+.checkbox {
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+}
 .checkbox input {
-  display: inline-block;
+  margin: 0px 8px 24px 0px;
+  appearance: none;
+  background-color: #fff;
+  padding: 0;
+  color: #747474;
   width: 24px;
   height: 24px;
-  margin: 0px 8px 24px 0px;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
 }
-.checkbox input:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.checkbox input::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #afadad;
+  background-color: #747474;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.checkbox input:checked::before {
+  transform: scale(1);
 }
 .checkbox input:focus {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
 }
 
 .sendButton {
   width: 20%;
+  margin-left: 0;
 }
 
 @media only screen and (max-width: 575px) {
